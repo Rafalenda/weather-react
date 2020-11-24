@@ -16,7 +16,7 @@ export default function Weather(props){
         <h2>Here it is the Weather Component</h2>
         <Loader
          type="Puff"
-         color="#00BFaF"
+         color="#000000"
          height={200}
          width={200}
          timeout={10000} //3 secs
