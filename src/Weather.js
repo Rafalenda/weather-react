@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios"; 
 import Loader from "react-loader-spinner";
+import Search from "./Search";
 
 export default function Weather(props){
 
@@ -12,16 +13,9 @@ export default function Weather(props){
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`
     axios.get(apiUrl).then(handleResponse);
 
-    return ( <div>
-        <h2>Here it is the Weather Component</h2>
-        <Loader
-         type="Puff"
-         color="#000000"
-         height={200}
-         width={200}
-         timeout={10000} //3 secs
- 
-        />
+    return ( 
+    <div>
+        <Search />
       </div>
     );
 }
